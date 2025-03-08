@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 980px;
+    margin: 0 auto;
+    font-family: "Lora", sans-serif;
+    font-weight: 400;
+}
+
+
+.yellowpart {
+    color: yellow;
+}
+/* header, */
+header {
+    background-color: #164e70;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+main {
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-align: center;
+    padding: 15px;
+    padding-bottom: 20px;
+}
+
+nav {
+    background-color: #000000;
+    margin: 0 auto;
+
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: overline;
+    color: yellow;
+}
+
+
+
+@media (min-width: 640px) {
+    nav ul {
+        display: flex;
+    }
+    nav ul li {
+        flex: 1 1 100%;
+    }
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 2.6fr 1.4fr;
+    gap: 10px;
+    margin: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #d3d2d2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.aright {
+    float: right;
+    width: 210px;
+    height: auto;
+    padding: 15px;
+}
+
+.aleft {
+    float: left;
+    width: 230px;
+    height: auto;
+    padding: 15px;
+    text-align: center;
+}
+
+.aleft img {
+    display: block;
+    margin: 0 auto;
+}
+
+.aleft figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+}
+
+.aleft+p {
+    margin-left: 230px;
+}
+
+section h2 {
+    font-size: 1.2rem;
+    background-color: #164e70;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+section h3 {
+    font-size: 1.2rem;
+    color: #111622;
+    text-align: center;
+    padding-top: 10px;
+}
+
+section hr {
+    border: none;
+    width: 80%;
+    height: 1.3px;
+    background-color: #164e70;
+    margin: 10px 60px;
+    margin-top: 5px;
+}
+
+section p {
+    padding: 20px;
+    margin: 10px;
+    color: #164e70;
+}
+
+section ul {
+    margin-left: 40px;
+    margin-top: 60%;
+}
+
+
+
+
+section a {
+    color: #164e70;
+    padding: 1.2rem;
+    text-decoration: none;
+}
+
+
+footer {
+    background-color: #164e70;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}

@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Test</title>
+    <title>WDD 131: Dynamic Web Fundamentals - Cleber Charleston Vitorio</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Cleber Charleston Vitorio">
+    <meta name="author" content="Cleber Charleston Vitorio">
+    <link rel="stylesheet" href="styles/base.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>WDD 131 - Initial Test</h1>
+
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - <span class="yellowpart">Cleber Charleston Vitorio</span></h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/cleber-vitorio-0345327b/">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">e-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng">Scripture</a></li>
+                <li><a href="https://clebervitorio.github.io/wdd131/">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+    <main>
+        <section class="card">
+            <h2>About Me</h2>
+            <img class="aright" src="images/cleber.jpg" alt="Hello, my name is Cleber Charleston Vitorio" width="200">
+            <p>My name is Cleber Charleston Vitorio and I prefer to be called Cleber or Cleber Vitorio. 
+                I was born in Brazil and live in Lisbon, Portugal with my wife. I have 4 children, two girls and two boys. 
+                The two girls are married and my oldest son is also married, only my youngest son, who is 22 years old, is single. 
+                I served a full-time mission in Paraná and Santa Catarina, at the time it was called the Brazil Curitiba Mission. 
+                I currently work at Aubay for the client KLx, where I am a Cobol Mainframe Developer, an old language but one that I really like. 
+                I love spending time in the temple, reading, traveling with my wife and listening to music. 
+                I love learning new things, it helps me to continue growing. Brazil, located in the South American continent, 
+                is known for its diverse culture and rich history. We have many influences from various cultures such as African, Japanese, French, German, Italian, Portuguese, Spanish and also other cultures that have recently arrived and that enrich our land with flavors, colors and much joy.
+            </p>
+            <h3>Lisbon, Portugal</h3>
+            <hr>
+            <figure class="aleft">
+                <img class="aleft" src="images/portugal-flag.jpg" alt="Hello, my name is Cleber Charleston Vitorio" width="200">
+                <figcaption>Official Flag of Portugal</figcaption>
+            </figure>
+            <p>
+                Portugal, officially the Portuguese Republic, is a unitary sovereign country located in southwestern Europe, 
+                whose territory is located in the western part of the Iberian Peninsula and in archipelagos in the North Atlantic. 
+                The Portuguese territory has a total area of ​​92,090 km², being bordered to the north and east by Spain and to the south and 
+                west by the Atlantic Ocean, comprising a continental part and two autonomous regions: the archipelagos of the Azores and Madeira. 
+                Portugal is the westernmost nation on the European continent. The name of the country comes from its second largest city, Porto, 
+                whose Latin-Celtic name was Portus Cale.
+            </p>
+        </section>
+        <section class="card">
+            <h2>Web Dev Ressources</h2>
+            <ul>
+                <li><a href="https://www.udemy.com/cart/subscribe/course/5798868/">Udemey</a></li>
+                <li><a href="https://codepen.io/pen/">Codepen</a></li>
+                <li><a href="https://react.dev/">JavaScript/React</a></li>
+                <li><a href="https://github.com/clebervitorio/wdd131/">Github</a></li>
+                <li><a href="https://www.codecademy.com/?g_network=g&g_productchannel=&g_adid=528849219280&g_locinterest=&g_keyword=codecademy&g_acctid=243-039-7011&g_adtype=&g_keywordid=kwd-41065460761&g_ifcreative=&g_campaign=account&g_locphysical=9069837&g_adgroupid=70492864474&g_productid=&g_source={sourceid}&g_merchantid=&g_placement=&g_partition=&g_campaignid=1726903838&g_ifproduct=&utm_id=t_kwd-41065460761:ag_70492864474:cp_1726903838:n_g:d_c&utm_source=google&utm_medium=paid-search&utm_term=codecademy&utm_campaign=INTL_Brand_Exact&utm_content=528849219280&g_adtype=search&g_acctid=243-039-7011&gad_source=1&gclid=CjwKCAjw7NmzBhBLEiwAxrHQ-YLWSzzugXXVo6FT7EE9yu4uQdThLqKjcmPPukln9E3nbBXAZFMOTxoCVlUQAvD_BwE/">Codeacademy</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span>  Cleber Charleston Vitorio  Brazil</p>
+        <p id="lastModified" class="yellowpart"></p>
+    </footer>
+    <script src="scripts/getdates.js" defer></script>
 </body>
+
 </html>
