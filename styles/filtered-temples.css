@@ -1,0 +1,188 @@
+:root {
+    --primary-color: #08386e; /* Dark Blue */
+    --secondary-color: #c06c4d; /* Warm Brown */
+    --accent1-color: #70bdb5; /* Teal Green */
+    --accent2-color: #ffddd2; /* Light Cream */
+    --subtle-color: #edf6f9; /* Very Light Blue */
+    --primary-trans-color: rgba(124, 190, 196, 0.8); /* Semi-Transparent Teal */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1333px;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--subtle-color);
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.navigation {
+    position: relative;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: var(--accent1-color);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 22px;
+    right: 0;
+    width: 150px;
+}
+
+.navigation li {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.navigation a {
+    text-decoration: none;
+    padding: 0.88rem;
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #000; /* Black text for links */
+}
+
+.navigation a:hover {
+    background-color: var(--accent2-color); /* Light Cream */
+    color: #000;
+}
+
+.open li {
+    display: block;
+}
+
+.active {
+    background-color: var(--primary-trans-color);
+    color: #fff;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+    position: absolute;
+    top: 0.25rem;
+    right: 0.5rem;
+}
+
+#menu::before {
+    color: #fff;
+    content: "☰";
+    padding: 5px;
+}
+
+#menu.open::before {
+    content: "❎";
+    padding: 0;
+}
+
+main h2 {
+    margin: 0;
+    padding: 0.75rem;
+    text-align: center;
+    background-color: var(--accent1-color);
+    color: #000; /* Ensure good contrast */
+}
+
+.temple-listings {
+    margin: 1rem;
+}
+
+.temple-card {
+    background-color: var(--accent2-color); /* Light Cream */
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    color: #333; /* Dark text for readability */
+}
+
+.temple-card h3 {
+    padding: 0.5rem 0;
+    color: #000; /* Black text for headers */
+}
+
+.temple-card img {
+    margin-top: 1rem;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    box-shadow: 3px 3px 10px #000;
+    border-radius: 8px;
+}
+
+.temple-detail {
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.detail-label {
+    font-variant: small-caps;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #485d9c; /* Dark Blue */
+    margin-top: 1em;
+    padding: 1rem;
+    color: #fff; /* White text for footer */
+}
+
+@media (min-width: 44.7rem) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    .navigation {
+        position: unset;
+        margin-right: 0.4rem;
+    }
+    .navigation ul {
+        flex-direction: row;
+        position: unset;
+        top: unset;
+        right: unset;
+        width: unset;
+        justify-content: space-around;
+    }
+    .navigation li {
+        border-bottom: none;
+        width: auto;
+    }
+    .temple-listings {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+    .temple-card {
+        margin-bottom: 0;
+    }
+}
