@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Get the current year and display it in the element with the id 'currentyear'
-    const currentYearSpan = document.getElementById('currentyear');
+    const currentYearSpan = document.getElementById("currentYear");
     if (currentYearSpan) {
         const currentYear = new Date().getFullYear();
         currentYearSpan.innerHTML = currentYear;
