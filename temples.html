@@ -1,74 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="WDD 131 - Temples Album - Cleber Charleston Vitorio Home page" />
-    <meta name="author" content="Cleber Charleston Vitorio" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./scripts/temples.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="page about Temples of the Church of Jesus Christ Saints of Latter  Days int the world">
+    <meta name="author" content="Cleber Vitorio">
+    <title>Responsive Navigation</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/temples.css">
+    <link rel="stylesheet" href="./styles/temples-large.css">
+   
     <script src="./scripts/getdates.js" defer></script>
-    <link rel="stylesheet" href="./styles/temples.css" />
-    <link rel="stylesheet" href="./styles/temples-large.css" />
-    <title>WDD 131 - Temples Album - Cleber Charleston Vitorio</title>
+    <script src="./scripts/temples.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <h1 class="title-page">Temple Album</h1>
-        <a id="menu" href="#"></a>
-        <nav>
-            <a href="https://clebervitorio.github.io/wdd131//">Home</a>
-            <a href="https://byupw.instructure.com/">Old</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng">New</a>
-            <a href="#">Large</a>
-            <a href="#">Small</a>
-        </nav>
+<header>
+    <h1>Temple Album</h1>
+    <button id="menu"></button>
+    <nav class="navigation">
+        <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </nav>
     </header>
+    <section>
+        <h2>Temples</h2>
+    </section>
+        
     <main>
-        <h2 class="main-title">Home</h2>
-            <div class="temples-grid">
-                <figure class="temple-image">
-                    <img src="./images/washington-dc-temple.jpg" alt="Washington D.C. Temple" />
-                    <figcaption>Washington D.C., USA</figcaption>
-                </figure>
-                <figure class="temple-image">
-                    <img src="./images/washington-dc-temple.jpg" alt="Washington D.C. Temple" />
-                    <figcaption>Washington D.C., USA</figcaption>
-                </figure>
-                <figure class="temple-image">
-                    <img src="./images/washington-dc-temple.jpg" alt="Washington D.C. Temple" />
-                    <figcaption>Washington D.C., USA</figcaption>
-                </figure>
-                <figure class="temple-image">
-                    <img src="./images/washington-dc-temple.jpg" alt="Washington D.C. Temple" />
-                    <figcaption>Washington D.C., USA</figcaption>
-                </figure>
-                <figure class="temple-image">
-                    <img src="./images/washington-dc-temple.jpg" alt="Washington D.C. Temple" />
-                    <figcaption>Washington D.C., USA</figcaption>
-                </figure>
-                <figure class="temple-image">
-                    <img src="./images/washington-dc-temple.jpg" alt="Washington D.C. Temple" />
-                    <figcaption>Washington D.C., USA</figcaption>
-                </figure>
-                <figure class="temple-image">
-                    <img src="./images/washington-dc-temple.jpg" alt="Washington D.C. Temple" />
-                    <figcaption>Washington D.C., USA</figcaption>
-                </figure>
-                <figure class="temple-image">
-                    <img src="./images/washington-dc-temple.jpg" alt="Washington D.C. Temple" />
-                    <figcaption>Washington D.C., USA</figcaption>
-                </figure>
-                <figure class="temple-image">
-                    <img src="./images/washington-dc-temple.jpg" alt="Washington D.C. Temple" />
-                    <figcaption>Washington D.C., USA</figcaption>
-                </figure>
-            </div>
-    </main>
+       
+    
+        <figure>
+            <img src="./images/saoPauloBrazilTemple.webp" alt="Sao Paulo Temple" loading="lazy">
+            <figcaption>Sao Paulo Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="./images/jordanRiverTemple.webp" alt="Jordan River Temple" loading="lazy">
+            <figcaption>Jordan River Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="./images/lisbonPortugalTemple.webp" alt="Lisbon Temple" loading="lazy">
+            <figcaption>Lisbon Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="./images/saltLakeTemple.jpg" alt="Salt Lake Temple" loading="lazy">
+            <figcaption>Salt Lake Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="./images/StGeorgeUtahTemple.jpg" alt="St George Temple" loading="lazy">
+            <figcaption>St George Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="./images/okinawaJapanTemple.jpg" alt="Oknawa Temple" loading="lazy">
+            <figcaption>Oknawa Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="./images/LaieTempleBack.png" alt="Laie Temple" loading="lazy">
+            <figcaption>Laie Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="./images/GuatemalaTemple.jpeg" alt="Guatemala Temple" loading="lazy">
+            <figcaption>Guatemala Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="./images/ItayTemple.webp" alt="Italy Temple" loading="lazy">
+            <figcaption>Italy Temple</figcaption>
+        </figure>
+
+</main>
+
     <footer>
-        <p><span id="currentyear"></span> | Cleber Charleston Vitorio | Lisbon, Portugal</p>
-        <p id="lastModified"></p>
+        <p>©️ <span id="currentyear"></span> - Cleber Vitorio - Portugal</p>
+        <p> Last Modified <span id="lastModified"></span> </p>
     </footer>
 </body>
 

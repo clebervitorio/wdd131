@@ -1,188 +1,154 @@
-:root {
-    --primary-color: #08386e; /* Dark Blue */
-    --secondary-color: #c06c4d; /* Warm Brown */
-    --accent1-color: #70bdb5; /* Teal Green */
-    --accent2-color: #ffddd2; /* Light Cream */
-    --subtle-color: #edf6f9; /* Very Light Blue */
-    --primary-trans-color: rgba(124, 190, 196, 0.8); /* Semi-Transparent Teal */
+:root{
+	--primary:  #159fd6;
+	--secundary: rgb(0, 0, 0);
+	--background-cards: rgb(255, 255, 255);
+	--border-color-cards: rgb(236, 236, 236);
 }
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 3px;
+	box-sizing: border-box;
+    font-family: poppins, sans-serif;
 }
 
-body {
-    max-width: 1333px;
-    margin: auto;
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--subtle-color);
+h1 {
+	text-align: left;
+	font-size: 1.5rem;
+	margin-left: 1rem;
+	    
+}
+section h2 {
+	font-size: 1.2rem;
+	color: var(--primary);
+	margin: 1rem;
+	text-align: center;
+	
 }
 
-header {
-    text-align: center;
-    width: 100%;
-    background-color: var(--primary-color);
-    padding: 1rem 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-}
-
-header h1 {
-    color: #fff;
-    font-size: 1.4rem;
-}
-
-.navigation {
-    position: relative;
-}
-
-.navigation ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    background-color: var(--accent1-color);
+.res-grid section {
     display: flex;
+    place-items: center;
+    width: 100%;
+    height: auto;
     flex-direction: column;
-    position: absolute;
-    top: 22px;
-    right: 0;
-    width: 150px;
-}
-
-.navigation li {
-    border-bottom: 1px solid var(--primary-color);
-}
-
-.navigation a {
-    text-decoration: none;
-    padding: 0.88rem;
-    display: block;
+    justify-content: space-between;
+    padding: 1rem;
+	margin-bottom: 10px;
     text-align: center;
-    font-size: 1.2rem;
-    color: #000; /* Black text for links */
+    border-radius: 10px;
+	/*border-color: var(--border-color-cards);*/
+    background-color: var(--background-cards);
+    box-shadow: 5px 5px 10px;
+    overflow: hidden; /* Adicione overflow: hidden para evitar que a imagem ultrapasse o contêiner */
 }
 
-.navigation a:hover {
-    background-color: var(--accent2-color); /* Light Cream */
-    color: #000;
+.res-grid img {
+    object-fit: cover; /* Garante que a imagem mantenha suas proporções e preencha o espaço disponível */
+    width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+    height: 100%; /* Garante que a imagem ocupe toda a altura do contêiner */
 }
 
-.open li {
-    display: block;
+
+.res-grid h3, .grid img {
+    font-size: 2rem;
+    padding: 1rem 0;
 }
 
-.active {
-    background-color: var(--primary-trans-color);
-    color: #fff;
+.res-grid img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
 }
 
+ul{
+	max-width: 700px;
+	margin: 1rem auto;
+    justify-content: center;
+}
+
+/* small view navigation */
 #menu {
-    font-size: 1.5rem;
-    border: 0;
-    background: none;
-    color: #000;
-    position: absolute;
-    top: 0.25rem;
-    right: 0.5rem;
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	position: absolute; /* Defina a posição absoluta */
+	top: 1rem; /* Posicione 1rem do topo */
+	right: 1rem; /* Posicione 1rem da direita */
+	cursor: pointer; /* Adicione cursor pointer */
 }
 
 #menu::before {
-    color: #fff;
-    content: "☰";
-    padding: 5px;
+	content: "☰";
 }
 
 #menu.open::before {
-    content: "❎";
-    padding: 0;
+	content: "X";
 }
 
-main h2 {
-    margin: 0;
-    padding: 0.75rem;
+.navigation {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	color: #ffffff;
+	background-color: var(--secundary);
+}
+
+.navigation a {
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+}
+.navigation a:hover {
+	background-color: #159fd6;
+	color: #ffffff; 
+	font-weight: 700;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+}
+
+.active::before {
+	content: "";  /* just a wayfinding symbol for the user */
+}
+
+
+
+
+footer{
+    background-color: black;
+    color: white;
     text-align: center;
-    background-color: var(--accent1-color);
-    color: #000; /* Ensure good contrast */
 }
 
-.temple-listings {
-    margin: 1rem;
-}
 
-.temple-card {
-    background-color: var(--accent2-color); /* Light Cream */
-    padding: 1rem;
-    border: 1px solid #ddd;
-    text-align: center;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    color: #333; /* Dark text for readability */
-}
 
-.temple-card h3 {
-    padding: 0.5rem 0;
-    color: #000; /* Black text for headers */
-}
+/* large view navigation ************************************/
+@media (min-width: 37.5em) {
+	h1 {
+		font-size: 2.5rem;
+		margin-left: 0;
+		text-align: center;
+	}
+	
+	h2 {
+		font-size: 2rem;
+		text-align: center;
+        
+	}
 
-.temple-card img {
-    margin-top: 1rem;
-    max-width: 400px;
-    width: 100%;
-    height: auto;
-    box-shadow: 3px 3px 10px #000;
-    border-radius: 8px;
-}
+	#menu {
+		display: none; /* hide hamburger button */
+	}
 
-.temple-detail {
-    width: 100%;
-    font-size: 0.9rem;
-}
+	
+	.navigation a {
+		display: block;
+		flex: 1 1 100%;
+	}
 
-.detail-label {
-    font-variant: small-caps;
-}
-
-footer {
-    width: 100%;
-    text-align: center;
-    background-color: #485d9c; /* Dark Blue */
-    margin-top: 1em;
-    padding: 1rem;
-    color: #fff; /* White text for footer */
-}
-
-@media (min-width: 44.7rem) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-    .navigation {
-        position: unset;
-        margin-right: 0.4rem;
-    }
-    .navigation ul {
-        flex-direction: row;
-        position: unset;
-        top: unset;
-        right: unset;
-        width: unset;
-        justify-content: space-around;
-    }
-    .navigation li {
-        border-bottom: none;
-        width: auto;
-    }
-    .temple-listings {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 1rem;
-    }
-    .temple-card {
-        margin-bottom: 0;
-    }
+	
 }

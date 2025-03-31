@@ -1,60 +1,149 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
 
-@media screen and (min-width: 500px) {
-    * {
-        margin: 0 auto;
-        font-family: 'Merriweather', serif;
-    }
-    header {
-        background-color: #305997;
-        display: flex;
-    }
-    #menu {
-        display: none;
-    }
-    header h1 {
-        color: white;
-        display: flex;
-        align-items: center;
-    }
-    nav {
-        display: flex;
-    }
-    nav a {
-        color: white;
-        text-decoration: none;
-        padding: 24px;
-    }
-    nav a:hover {
-        color: #3e73a9;
-        background-color: white;
-    }
-    main {
-        padding: 36px;
-    }
-    main h1 {
-        text-align: center;
-        font-size: 24px;
-    }
-    .temples-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        text-align-last: center;
-        padding: 16px;
-    }
-    .temple-image img {
-        padding: 16px;
-        width: 90%;
-        border-radius: 26px;
-    }
-    footer {
-        padding: 10px;
-        background-color: #40698c;
-        color: white;
-        text-align: center;
-    }
-    #lastModified {
-        color: #FDFE4C;
-        font-size: 12px;
-    }
+h1 {
+	text-align: left;
+	font-family: times, serif;
+	font-size: 1.5rem;
+	margin-left: 1rem;
+    font-family: poppins, sans-serif;
+}
+section h2 {
+	font-size: 1.2rem;
+	color: #159fd6;
+	margin: 1rem;
+	text-align: center;
+	
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+nav{
+	max-width: 700px;
+	margin: 1rem auto;
+    justify-content: center;
+}
+
+/* small view navigation */
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	position: absolute; /* Defina a posição absoluta */
+	top: 1rem; /* Posicione 1rem do topo */
+	right: 1rem; /* Posicione 1rem da direita */
+	cursor: pointer; /* Adicione cursor pointer */
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "X";
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	color: #ffffff;
+	background-color:rgb(0, 0, 0);
+}
+
+.navigation a {
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+}
+.navigation a:hover {
+	background-color: #159fd6;
+	color: #ffffff; 
+	font-weight: 700;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+}
+
+active::before {
+	content: "📍";  /* just a wayfinding symbol for the user */
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+figure {
+    flex: 1 1 calc(33.333% - 20px); /* 3 figuras por linha com espaço de 20px */
+    max-width: 300px; /* Ajuste conforme necessário */
+    margin: 10px; /* Adiciona espaçamento entre as figuras */
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: 200px; /* Defina a altura desejada */
+    object-fit: cover; /* Garante que as imagens mantenham a proporção e se ajustem ao contêiner */
+}
+
+feColorMatrix figcaption {
+    margin-top: 10px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+
+
+/* large view navigation ************************************/
+@media (min-width: 37.5em) {
+	h1 {
+		font-size: 2.5rem;
+		margin-left: 0;
+		text-align: center;
+	}
+	
+	h2 {
+		font-size: 2rem;
+		text-align: center;
+        
+	}
+
+	#menu {
+		display: none; /* hide hamburger button */
+	}
+
+	.navigation {
+		flex-direction: row;
+        color: black;
+        
+	}
+
+	.navigation a {
+		display: block;
+		flex: 1 1 100%;
+	}
+
+	
 }
