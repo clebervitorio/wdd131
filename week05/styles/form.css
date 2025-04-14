@@ -1,101 +1,222 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: white;
+*{
     margin: 0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-height: 100%;
-    font-weight: bold;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
 }
 
-h1 {
-    color:  #03355e;
-    ;
-}
+/*--------fieldset styles--------------*/
 
-form {
-    background: rgba(255, 165, 0);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-}
-
-select, input[type="date"], input[type="text"], textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-top: 5px;
+fieldset{
     border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
+    border-radius: 10px;
+    padding: .5rem 4%;
+    font-size: .9rem;
 
-.rating {
+}
+/*-------------fieldset overal rating------*/
+.overal{
+
     display: flex;
-    justify-content: space-between;
-    width: 150px;
-    margin: 10px 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+    
+
 }
 
-.rating input {
-    display: none;
-}
+.overal label{
 
-.rating label {
-    font-size: 24px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.rating input:checked ~ label,
-.rating input:hover ~ label {
-    color: rgb(167, 28, 4);
-}
-
-.features {
-    display: flex;
-    flex-direction: column;
-}
-
-.feature-item {
-    display: flex;
-    align-items: center;
-    margin: 5px 0;
-}
-
-.features input {
-    margin-right: 8px;
-}
-
-input[type="submit"] {
-    background-color: #ff5100;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-input[type="submit"]:hover {
-    background-color: #ff0000;
-}
-
-footer {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+    display: block;
     text-align: center;
-    font-size: 14px;
-    color: #0c0b0b;
+    margin-bottom: 5px;
+
+}
+
+fieldset.exp .checkall {
+
+    font-size: 12px;
+
+}
+
+/*-------------fieldset productinfo------*/
+.productinfo{
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+
+}
+
+
+
+/*-------------fieldset your experience------*/
+
+.exp{
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 8px;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.exp legend{
+  
+    text-align: left;
+}
+
+legend{
+
+    font-weight:600;
+    padding: 0 1.8rem;
+        
+}
+
+/*----------h1 Product Review style---*/
+
+.form-delimitations h1 .title {
+    color: rgb(130, 255, 14);
+    font-size: 25px;
+    font-weight: 700;
+    background-color: black;
+    padding: 0 .5rem;
+}
+
+h1{
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 5px;
+    
+}
+
+p {
+    text-align: center;
+}
+
+/*----------form delimitations------------*/
+
+section.form{
+
+    padding: 20px 2%;
+}
+
+/*---------max-width form------------*/
+
+form{
+   
+    max-width: 600px;
+    margin: 0 auto;/*center the form*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/*----------input styles----------*/
+
+form input{
     width: 100%;
-    background-color: rgba(255, 165, 0) ;
+    background-color: rgb(130, 255, 14);
+    border: 0;
+    outline: 0;
+    padding: 8px 15px;
+    border-radius: 10px;
+
+
+}
+
+form textarea{
+    width: 100%;
+    background-color: rgb(130, 255, 14);
+    border: 0;
+    outline: 0;
+    padding: 8px 15px;
+    border-radius: 10px;
+    resize: none;
+    height: 80px;
+
+
+}
+
+/*----------button styles------*/
+
+form .btn-submit{
+
+   text-align: center;
+   width: 180px;
+   margin: 0 auto;
+
+}
+
+form .btn-submit input{
+
+    cursor: pointer;
+    font-size: 18px;
+    height: 55px;
+    
+}
+
+button:hover, form .btn-submit input:hover{
+
+
+background: black;
+color: rgb(130, 255, 14);
+font-weight: 600; 
+
+}
+
+/*--------textarea styles-----------*/
+
+/* Style bar */
+textarea::-webkit-scrollbar {
+    width: 12px; /* largura da barra de rolagem */
+}
+
+/* Style tread bar */
+textarea::-webkit-scrollbar-track {
+    background: rgb(130, 255, 14); /* cor do fundo da trilha */
+    border-radius: 10px; /* bordas arredondadas */
+}
+
+/* Length bar */
+textarea::-webkit-scrollbar-thumb {
+    background: #888; /* cor do polegar */
+    border-radius: 10px; /* bordas arredondadas */
+    border: solid rgb(130, 255, 14);
+}
+
+/* Style bar when the mouse to pass */
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #555; /* cor do polegar ao passar o mouse */
+}
+
+/*----------selectAproduct style----------*/
+select{
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(130, 255, 14);
+    border-radius: 10px;
+    background-color: rgb(130, 255, 14);
+    height: 35px;
+    padding-left: 0.5rem;
+
+}
+
+/*--------delimitations footer------------------*/
+footer{
+
+    padding: 10px 4%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+
 }

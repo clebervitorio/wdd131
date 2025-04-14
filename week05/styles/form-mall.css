@@ -1,0 +1,33 @@
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .overal {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .productinfo {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .exp {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .form-delimitations h1 .title {
+        font-size: 20px;
+    }
+
+    legend {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
